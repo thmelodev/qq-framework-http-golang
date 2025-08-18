@@ -8,8 +8,8 @@ import (
 
 	"github.com/InVisionApp/go-health/v2"
 	"github.com/qq-mercantil/qq-framework-basic-golang/cache"
-	"github.com/qq-mercantil/qq-framework-basic-kafka/kafka"
 	"github.com/qq-mercantil/qq-framework-db-golang/db"
+	"github.com/qq-mercantil/qq-framework-kafka-golang/kafka"
 	kafkaGo "github.com/segmentio/kafka-go"
 )
 

@@ -200,10 +200,10 @@ github.com/puzpuzpuz/xsync/v3 v3.5.1 h1:GJYJZwO6IdxN/IKbneznS6yPkVC+c3zyY/j19c++
 github.com/puzpuzpuz/xsync/v3 v3.5.1/go.mod h1:VjzYrABPabuM4KyBh1Ftq6u8nhwY5tBPKP9jpmh0nnA=
 github.com/qq-mercantil/qq-framework-basic-golang v0.0.0-20250710140357-dd8d2277377e h1:gkofLU24Njwm7bBogIOOSgRcnqeaUPZvEXimbpxQXeE=
 github.com/qq-mercantil/qq-framework-basic-golang v0.0.0-20250710140357-dd8d2277377e/go.mod h1:zIbsotmxMxie9mU8nkMpBjCmt0mnM3uo+Sr/kf7Zp7Q=
-github.com/qq-mercantil/qq-framework-basic-kafka v0.0.0-20250710140741-9289d73e993f h1:yzZ50ogmMSIiw+BuID34aEfsshYiPOViA6znqtmqtIM=
-github.com/qq-mercantil/qq-framework-basic-kafka v0.0.0-20250710140741-9289d73e993f/go.mod h1:TfSN6FC1NQ2Dx858ztLwYZBhtDi3EfeBz/jrKTMmhX8=
 github.com/qq-mercantil/qq-framework-db-golang v0.0.0-20250710135848-db3f1f8f799d h1:8gwATVkABtHrl+DNwBTYR3uBbjE87qw9jaeeBONRem4=
 github.com/qq-mercantil/qq-framework-db-golang v0.0.0-20250710135848-db3f1f8f799d/go.mod h1:gZERAJeIAANqCDcrD/vK8UQpTT+D1b+zA7VuRV8uU4c=
+github.com/qq-mercantil/qq-framework-kafka-golang v0.0.0-20250722204614-8a8b31bfec57 h1:5VWjK+S90yQ8IjpIBTSPYR4j0xPSKMKrTLeivqgkslw=
+github.com/qq-mercantil/qq-framework-kafka-golang v0.0.0-20250722204614-8a8b31bfec57/go.mod h1:5BGqOzzWScvdX6CcqzRuSnk+Ce351GdWCKp35UBiU2g=
 github.com/qq-mercantil/qq-framework-log-golang v0.0.0-20250710135219-89fdba462288 h1:m2vClEyYFadXnmskCxgsThsYFdJxn/gMotYpuSMwNMg=
 github.com/qq-mercantil/qq-framework-log-golang v0.0.0-20250710135219-89fdba462288/go.mod h1:5qTHDLJRmJ1gvNnI6RX1epX1gzS4mQEM/evjNlkPYmo=
 github.com/redis/go-redis/v9 v9.11.0 h1:E3S08Gl/nJNn5vkxd2i78wZxWAPNZgUNTp8WIJUAiIs=

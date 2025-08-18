@@ -6,7 +6,6 @@ require (
 	github.com/InVisionApp/go-health/v2 v2.1.4
 	github.com/labstack/echo/v4 v4.13.4
 	github.com/qq-mercantil/qq-framework-basic-golang v0.0.0-20250710140357-dd8d2277377e
-	github.com/qq-mercantil/qq-framework-basic-kafka v0.0.0-20250710140741-9289d73e993f
 	github.com/qq-mercantil/qq-framework-db-golang v0.0.0-20250710135848-db3f1f8f799d
 	github.com/segmentio/kafka-go v0.4.48
 	go.uber.org/fx v1.24.0
@@ -69,6 +68,7 @@ require (
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/power-devops/perfstat v0.0.0-20240221224432-82ca36839d55 // indirect
 	github.com/puzpuzpuz/xsync/v3 v3.5.1 // indirect
+	github.com/qq-mercantil/qq-framework-kafka-golang v0.0.0-20250722204614-8a8b31bfec57 // indirect
 	github.com/qq-mercantil/qq-framework-log-golang v0.0.0-20250710135219-89fdba462288 // indirect
 	github.com/redis/go-redis/v9 v9.11.0 // indirect
 	github.com/rs/zerolog v1.34.0 // indirect
