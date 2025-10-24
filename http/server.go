@@ -6,6 +6,7 @@ import (
 	netHTTP "net/http"
 	"os"
 
+	echoTrace "github.com/DataDog/dd-trace-go/contrib/labstack/echo.v4/v2"
 	"github.com/labstack/echo/v4"
 	"github.com/qq-mercantil/qq-framework-log-golang/logger"
 	"go.uber.org/fx"
@@ -17,10 +18,10 @@ type HttpServer struct {
 }
 
 type ServerParams struct {
-    fx.In
-    Config IHttpProvider
-    HealthChecks *HealthChecks `optional:"true"`
-    Lifecycle fx.Lifecycle
+	fx.In
+	Config       IHttpProvider
+	HealthChecks *HealthChecks `optional:"true"`
+	Lifecycle    fx.Lifecycle
 }
 
 func NewServer(
@@ -30,14 +31,21 @@ func NewServer(
 	log := logger.Get()
 
 	server := echo.New()
+
+	if os.Getenv("DD_TRACE_ENABLED") == "true" {
+		server.Use(echoTrace.Middleware(
+			echoTrace.WithService(os.Getenv("DD_SERVICE")),
+		))
+	}
+
 	server.Use(logger.EchoLogger)
 
 	appGroup := server.Group(fmt.Sprintf("/%s", os.Getenv("APP_NAME")))
 
 	if params.HealthChecks != nil {
-        healthHandler := NewHealthHandler(params.HealthChecks)
-        appGroup.GET("/health", healthHandler.CustomHealthHandler)
-    }
+		healthHandler := NewHealthHandler(params.HealthChecks)
+		appGroup.GET("/health", healthHandler.CustomHealthHandler)
+	}
 
 	appGroup.GET("/alive", func(c echo.Context) error {
 		response := map[string]string{
