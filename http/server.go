@@ -5,6 +5,7 @@ import (
 	"fmt"
 	netHTTP "net/http"
 	"os"
+	"strings"
 
 	echoTrace "github.com/DataDog/dd-trace-go/contrib/labstack/echo.v4/v2"
 	"github.com/labstack/echo/v4"
@@ -35,7 +36,12 @@ func NewServer(
 	if os.Getenv("DD_TRACE_ENABLED") == "true" {
 		server.Use(echoTrace.Middleware(
 			echoTrace.WithService(os.Getenv("DD_SERVICE")),
+			echoTrace.WithIgnoreRequest(func(c echo.Context) bool {
+				path := c.Request().URL.Path
+				return strings.Contains(path, "health") || strings.Contains(path, "alive")
+			}),
 		))
+
 	}
 
 	server.Use(logger.EchoLogger)
